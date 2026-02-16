@@ -73,9 +73,10 @@ function revealSecret() {
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
 
-    if (path.includes('admin.html')) {
+    if (path.includes('admin')) {
         initAdminPage();
-    } else if (path.includes('flag.html')) {
+    }
+    if (path.includes('flag')) {
         initFlagPage();
     }
 });
