@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CTF Shop — Classified section.">
+    <title>CTF Shop — 🏴 Flag</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="flag-page">
+        <div class="flag-card">
+            <div class="trophy">🏆</div>
+            <h1>Congratulations!</h1>
+            <p class="flag-desc">You've found the hidden flag. Submit it to earn your points!</p>
+            <div class="flag-box" id="flag-value">
+                <!-- Flag is injected by admin.js — not hardcoded here -->
+                Loading...
+            </div>
+            <a href="index.html" class="flag-back">← Back to Shop</a>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

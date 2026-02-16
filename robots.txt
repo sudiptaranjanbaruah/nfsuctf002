@@ -1,0 +1,6 @@
+# robots.txt
+User-agent: *
+Disallow: /admin.html
+Disallow: /flag.html
+
+# Hmm, what could be at /admin.html? 🤔

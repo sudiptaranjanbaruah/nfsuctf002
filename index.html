@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CTF Shop — Your favorite online tech store. Browse cool tech gear and gadgets.">
+  <title>CTF Shop — Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="emoji">🛍️</span>
+        <span>CTF Shop</span>
+      </a>
+      <div class="nav-links">
+        <span id="user-greeting" class="user-greeting" style="display:none;"></span>
+        <a href="index.html"><span>🏠</span> <span class="nav-text">Home</span></a>
+        <button class="cart-btn" onclick="openCart()">
+          <span>🛒</span> <span class="nav-text">Cart</span>
+          <span class="cart-count" id="cart-count" style="display:none;">0</span>
+        </button>
+        <a href="admin.html" class="admin-link" id="admin-nav"><span>⚙️</span> <span class="nav-text">Admin</span></a>
+        <a href="login.html" class="login-btn" id="login-btn"><span>👤</span> <span class="nav-text">Login</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <h1>Flag: <span class="highlight">NFSUCTF{4c206d9dfb19fba61cb3fc947d190e9217b05258f3154ecc74eec7a8939c2f2b}</span>
+    </h1>
+    <p>NFSUCTF{4c206d9dfb19fba61cb3fc947d190e9217b05258f3154ecc74eec7a8939c2f2b}
+
+  </section>
+
+  <!-- ===== Products ===== -->
+  <h2 class="section-title">Featured Products</h2>
+  <div class="products-grid" id="products-grid">
+    <!-- Rendered by cart.js -->
+  </div>
+
+  <!-- ===== Product Modal ===== -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProductModal()">✕</button>
+      <div class="modal-img" id="modal-img"></div>
+      <div class="modal-body">
+        <h2 id="modal-name"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-price" id="modal-price"></div>
+        <button class="modal-add-btn" id="modal-add-btn">🛒 Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Cart Sidebar ===== -->
+  <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>🛒 Your Cart</h2>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <!-- Rendered by cart.js -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="total-price" id="cart-total">$0.00</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">✨ Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast">
+    <span class="toast-msg"></span>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2026 CTF Shop — Built with ❤️ for learning</p>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>

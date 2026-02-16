@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CTF Shop Admin Dashboard — Manage orders and view analytics.">
+    <title>CTF Shop — Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="emoji">🛍️</span>
+                <span>CTF Shop</span>
+            </a>
+            <div class="nav-links">
+                <span id="user-greeting" class="user-greeting" style="display:none;"></span>
+                <a href="../index.html"><span>🏠</span> <span class="nav-text">Home</span></a>
+                <a href="../admin.html" class="admin-link" id="admin-nav" style="display:flex;"><span>⚙️</span> <span
+                        class="nav-text">Admin</span></a>
+                <a href="#" class="login-btn" id="login-btn" onclick="logout()"><span>🚪</span> <span
+                        class="nav-text">Logout</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Admin Header ===== -->
+    <header class="admin-header">
+        <h1>⚙️ Admin Dashboard</h1>
+        <p>Manage your shop, view analytics, and access secrets</p>
+    </header>
+
+    <!-- ===== Admin Content ===== -->
+    <main class="admin-content">
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div class="stat-num" data-target="1247">0</div>
+                <div class="stat-label">Total Orders</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-num" data-target="89420">0</div>
+                <div class="stat-label">Revenue ($)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-num" data-target="3856">0</div>
+                <div class="stat-label">Customers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-num" data-target="4892">0</div>
+                <div class="stat-label">Reviews</div>
+            </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <section class="admin-section">
+            <h2>📋 Recent Orders</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD-4821</td>
+                        <td>Alice Johnson</td>
+                        <td>Apple AirPods Pro</td>
+                        <td>$249.00</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-4820</td>
+                        <td>Bob Smith</td>
+                        <td>Sony WH-1000XM5</td>
+                        <td>$348.00</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-4819</td>
+                        <td>Charlie Brown</td>
+                        <td>Logitech MX Master 3S × 3</td>
+                        <td>$299.97</td>
+                        <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-4818</td>
+                        <td>Diana Ross</td>
+                        <td>MacBook Air M2</td>
+                        <td>$1199.00</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-4817</td>
+                        <td>Eve Wilson</td>
+                        <td>JBL Charge 5</td>
+                        <td>$179.95</td>
+                        <td><span class="status-badge cancelled">Cancelled</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Secret Section -->
+        <section class="admin-section">
+            <h2>🔒 Secret Access</h2>
+            <p style="color: var(--text-light); margin-bottom: 1rem;">Only authorized administrators can access the
+                classified section.</p>
+            <button class="secret-btn" onclick="revealSecret()">
+                🗝️ Reveal Secret Access
+            </button>
+            <div id="secret-link">
+                <p>🎯 Secret page unlocked! Access it here: <a href="../flag.html">→ Open Flag Page</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <p>© 2026 CTF Shop — Admin Panel</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
